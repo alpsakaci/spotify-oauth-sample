@@ -36,7 +36,7 @@ public class OAuth2LoginSecurityConfig extends WebSecurityConfigurerAdapter {
 				.clientAuthenticationMethod(ClientAuthenticationMethod.BASIC)
 				.authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
 				.redirectUri("{baseUrl}/login/oauth2/code/{registrationId}")
-				.scope("user-read-private", "user-read-email")
+				.scope("user-library-read", "playlist-modify-public", "playlist-modify-private")
 				.authorizationUri("https://accounts.spotify.com/authorize")
 				.tokenUri("https://accounts.spotify.com/api/token")
 				.userInfoUri("https://api.spotify.com/v1/me")
